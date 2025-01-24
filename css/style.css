@@ -35,6 +35,7 @@ main {
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 70%;
+    position: relative;
 }
 
 /* parte immagine della card */
@@ -49,9 +50,10 @@ main {
 
 figure img {
     width: 100%;
+    cursor: pointer;
 }
 
-.pin {    
+.pin {
     position: absolute;
     top: 0;
     right: 50%;
@@ -73,32 +75,70 @@ figure img {
     font-size: 12px;
 }
 
+/* parte hover immagine */
+
+.card:hover {
+    transform: rotate(35deg);    
+    z-index: 1800;
+}
+
+.card:hover .pin {
+    display: none;
+}
+
+/* parte apertura immagine in fullscreen */
+
+.fullScreen {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.fullScreen img {
+    max-width: 40%;
+    padding: 30px 0;
+}
+
+#closeButton {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
 /*************************************************
     TABLET VERSION
  *************************************************/
 
- @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .card {
-        width: 48%;        
+        width: 48%;
     }
 
-    
- }
+
+}
 
 
-
-
- /*************************************************
+/*************************************************
     MOBILE VERSION
  *************************************************/
 
- 
- @media screen and (max-width: 480px) {
+
+@media screen and (max-width: 480px) {
 
     .card {
-        width: 95%;        
+        width: 95%;
     }
 
-    
- }
+}
