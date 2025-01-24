@@ -3,3 +3,71 @@
     border: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: "Edu Tas Beginner", sans-serif;
+}
+
+/* HEADER */
+
+header {
+    background-image: url(../img/wall.png);
+    height: 80px;
+}
+
+h1 {
+    text-align: center;
+    font-size: bold;
+    font-size: 40px;
+    line-height: 80px;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/cork.png);
+}
+
+.containerCard {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 70%;
+}
+
+/* parte immagine della card */
+
+.card {
+    width: 30%;
+    background-color: white;
+    padding: 10px;
+    margin: 20px 0;
+    position: relative;
+}
+
+figure img {
+    width: 100%;
+}
+
+.pin {    
+    position: absolute;
+    top: 0;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+}
+
+.pin img {
+    width: 18px;
+}
+
+/* parte testo della card */
+
+.date {
+    font-family: "Sometype Mono", monospace;
+    color: #828484;
+}
