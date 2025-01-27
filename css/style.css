@@ -108,7 +108,7 @@ figure img {
 }
 
 .fullScreen img {
-    max-width: 40%;
+    max-width: 38%;
     padding: 30px 0;
     margin-top: 40px;
 }
@@ -137,6 +137,10 @@ figure img {
 
     .fullScreen {
         width: 150%;
+    }
+
+    .fullScreen img {
+        max-width: 45%;        
     }
 
     #closeButton {
