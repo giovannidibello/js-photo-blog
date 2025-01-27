@@ -7,7 +7,7 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
 
         // prendo l'array con le cards
         const cardObj = response.data;
-        console.log(cardObj);
+        // console.log(cardObj);
 
         // ciclo su tutta la lunghezza dell'array
         for (i = 0; i < cardObj.length; i++) {
@@ -33,12 +33,12 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
             `
         }
 
-        // selezioni gli elementi del DOM per l'apertura delle immagini fullscreen
-        const imageCard = document.querySelectorAll("figure img");
+        // seleziono gli elementi del DOM per l'apertura delle immagini fullscreen
+        const imageCards = document.querySelectorAll("figure img");
         const main = document.querySelector("main");
 
         // ciclo su tutte le immagini delle cards create in precedenza
-        imageCard.forEach((imageCard) => {
+        imageCards.forEach((imageCard) => {
             // aggiungo l'evento al click
             imageCard.addEventListener("click", () => {
 
