@@ -18,8 +18,7 @@ header {
 }
 
 h1 {
-    text-align: center;
-    font-size: bold;
+    text-align: center;    
     font-size: 60px;
     line-height: 100px;
 }
@@ -85,6 +84,12 @@ figure img {
 .card:hover {
     transform: rotate(35deg);
     z-index: 1800;
+    transition: transform 0.8s ease
+}
+
+.disableHover .card:hover {
+    transform: none;
+    z-index: auto;
 }
 
 .card:hover .pin {

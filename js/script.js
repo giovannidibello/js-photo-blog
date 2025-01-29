@@ -42,6 +42,10 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
             // aggiungo l'evento al click
             imageCard.addEventListener("click", () => {
 
+                // disabilito l'hover
+                document.body.classList.add("disableHover");
+
+
                 // creo un nuovo elemento e gli associo la classe e il display block
                 const openImage = document.createElement("div");
                 openImage.className = "fullScreen";
@@ -58,6 +62,9 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
                 const closeButton = document.getElementById("closeButton");
                 // chiudo il fullscreen al click sul bottone
                 closeButton.addEventListener("click", () => {
+
+                    // riattivo l'hover
+                    document.body.classList.remove("disableHover");
 
                     // imposto di nuovo display none e rimuovo il contenitore
                     openImage.style.display = "none";
